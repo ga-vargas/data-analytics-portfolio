@@ -4,6 +4,8 @@
 
 **Business question:** How do screen time and sleep quality affect adolescent depression risk, and what should schools and health organizations do about it?
 
+<img width="800" alt="Interactive Excel dashboard with slicers for sex, screen time, sleep and risk group" src="https://github.com/user-attachments/assets/18fef4ff-cb2c-407b-8a2b-bf58130e5ae8" />
+
 ## Data
 Public dataset from a peer-reviewed study (Hökby et al., 2025, *PLOS Global Public Health*): **4,810 adolescents** with screen time, sleep measures, and depression scores (BDI-II, 0–63). I checked for missing values and duplicate IDs and reviewed outliers.
 
@@ -34,6 +36,8 @@ Public dataset from a peer-reviewed study (Hökby et al., 2025, *PLOS Global Pub
 
 **Pregunta de negocio:** ¿Cómo afectan el tiempo de pantalla y la calidad del sueño al riesgo de depresión en adolescentes, y qué deberían hacer las escuelas y las organizaciones de salud?
 
+<img width="800" alt="Dashboard interactivo en Excel con segmentadores de sexo, tiempo de pantalla, sueño y grupo de riesgo" src="https://github.com/user-attachments/assets/18fef4ff-cb2c-407b-8a2b-bf58130e5ae8" />
+
 ## Datos
 Dataset público de un estudio con revisión por pares (Hökby et al., 2025, *PLOS Global Public Health*): **4.810 adolescentes** con datos de tiempo de pantalla, sueño y puntaje de depresión (BDI-II, 0–63). Verifiqué valores faltantes e IDs duplicados y revisé los valores extremos.
 
@@ -54,4 +58,3 @@ Dataset público de un estudio con revisión por pares (Hökby et al., 2025, *PL
 
 ## Archivos
 - [`adolescent_depression_presentation.pdf`](adolescent_depression_presentation.pdf): presentación de 7 diapositivas
-- [`adolescent_depression_dashboard.xlsm`](adolescent_depression_dashboard.xlsm): libro completo y dashboard interactivo
