@@ -1,46 +1,57 @@
-# Depression Risk Analysis
-# Spotify Chart Analysis: What Separates a Top 10 Hit?
+# Screen Time, Sleep and Adolescent Depression
 
-**Business question:** What characteristics differentiate songs that reach the Top 10 of the Spotify Global chart from those that never get past the Top 50?
+[Versión en español](#versión-en-español)
+
+**Business question:** How do screen time and sleep quality affect adolescent depression risk, and what should schools and health organizations do about it?
 
 ## Data
-Spotify Charts Global Weekly Top 200 (2025–2026). I combined 91 weekly files (18,398 rows), removed duplicates, and cleaned artist names, leaving **1,272 unique songs** and **826 artists**.
+Public dataset from a peer-reviewed study (Hökby et al., 2025, *PLOS Global Public Health*): **4,810 adolescents** with screen time, sleep measures, and depression scores (BDI-II, 0–63). I checked for missing values and duplicate IDs and reviewed outliers.
 
 ## Key findings
-- **Chart success is not about the sound.** None of the audio features (danceability, energy, valence, tempo, loudness, acousticness) correlate with peak rank (all between -0.12 and +0.09).
-- **The artist matters far more.** Taylor Swift (73%) and BTS (62%) have hit rates far above the 16.8% average. The top 20 artists make up 35% of songs but 44% of Top 10 hits.
-- **Genre matters too.** Pop (28.7%) and K-Pop (28.6%) lead on Top 10 hit rate, while Regional Mexicano sits at 1.3%.
-- Explicit content is slightly less common in hits (27%) than in minor hits (34%).
+- **Screen time alone barely predicts depression.** It explains about 1% of the variation in scores.
+- **Sleep quality is the strongest predictor.** It explains 14.5%, roughly 13 times more than screen time. 50% of poor sleepers fall in the clinical range vs. 9% of good sleepers.
+- **High screen time plus poor sleep flags a high-risk group:** 61 adolescents with 2.3x higher depression scores (16.3 vs. 7.2) and 1.5 fewer hours of sleep. 77% are girls.
+
+## Recommendations
+1. Screen for sleep quality in school check-ups.
+2. Focus on difficulty falling asleep and early waking, the sleep problems most linked to depression.
+3. Use high screen time plus poor sleep as a triage flag.
 
 ## Tools and methods
-- **Excel:** COUNTIFS, SUMPRODUCT, AVERAGEIFS, CORREL, INDEX+MATCH, FILTER, IFERROR, TRIM, pivot table
-- **Interactive lookup dashboard** to search any song or artist
-- **Python (Pandas):** merging and cleaning the weekly files
+- **Interactive Excel dashboard:** 4 slicers, 4 VBA macros (clear filters, show at-risk group, timestamp, export to PDF), conditional formatting, 13 charts
+- **Statistics in Excel:** CORREL, RSQ, SLOPE/INTERCEPT, STDEV.S, CONFIDENCE.NORM, PERCENTILE, COUNTIFS, AVERAGEIFS, nested IF
+- **PowerPoint** presentation with business recommendations
 
 ## Files
-- [`spotify_chart_analysis.xlsm`](spotify_chart_analysis.xlsm): full workbook with data, analysis, charts, and dashboard
+- [`adolescent_depression_presentation.pdf`](adolescent_depression_presentation.pdf): 7-slide presentation
+- [`adolescent_depression_dashboard.xlsm`](adolescent_depression_dashboard.xlsm): full workbook and interactive dashboard
 
-- ESPAÑOL
+---
 
-- # Análisis de Spotify Charts: ¿Qué diferencia a un éxito del Top 10?
+# Versión en español
 
-[English version](README.md)
+# Tiempo de pantalla, sueño y depresión adolescente
 
-**Pregunta de negocio:** ¿Qué características diferencian a las canciones que llegan al Top 10 del ranking global de Spotify de las que nunca pasan del puesto 50?
+**Pregunta de negocio:** ¿Cómo afectan el tiempo de pantalla y la calidad del sueño al riesgo de depresión en adolescentes, y qué deberían hacer las escuelas y las organizaciones de salud?
 
 ## Datos
-Spotify Charts, Top 200 semanal global (2025–2026). Combiné 91 archivos semanales (18.398 filas), eliminé duplicados y limpié los nombres de artistas, y quedaron **1.272 canciones únicas** y **826 artistas**.
+Dataset público de un estudio con revisión por pares (Hökby et al., 2025, *PLOS Global Public Health*): **4.810 adolescentes** con datos de tiempo de pantalla, sueño y puntaje de depresión (BDI-II, 0–63). Verifiqué valores faltantes e IDs duplicados y revisé los valores extremos.
 
 ## Hallazgos principales
-- **El éxito en el ranking no depende del sonido.** Ninguna característica de audio (bailabilidad, energía, valencia, tempo, volumen, acústica) se correlaciona con la posición máxima alcanzada (todas entre -0,12 y +0,09).
-- **El artista importa mucho más.** Taylor Swift (73%) y BTS (62%) tienen tasas de éxito muy por encima del promedio de 16,8%. Los 20 artistas principales concentran el 35% de las canciones, pero el 44% de los éxitos del Top 10.
-- **El género también influye.** Pop (28,7%) y K-Pop (28,6%) lideran la tasa de éxito en el Top 10, mientras que Regional Mexicano llega solo al 1,3%.
-- El contenido explícito es algo menos frecuente en los éxitos (27%) que en los éxitos menores (34%).
+- **El tiempo de pantalla por sí solo casi no predice la depresión.** Explica alrededor del 1% de la variación en los puntajes.
+- **La calidad del sueño es el predictor más fuerte.** Explica el 14,5%, unas 13 veces más que el tiempo de pantalla. El 50% de quienes duermen mal está en rango clínico, contra el 9% de quienes duermen bien.
+- **Mucho tiempo de pantalla más mal sueño marca un grupo de alto riesgo:** 61 adolescentes con puntajes de depresión 2,3 veces más altos (16,3 vs. 7,2) y 1,5 horas menos de sueño. El 77% son chicas.
+
+## Recomendaciones
+1. Evaluar la calidad del sueño en los controles escolares.
+2. Poner el foco en la dificultad para dormirse y el despertar temprano, los problemas de sueño más ligados a la depresión.
+3. Usar mucho tiempo de pantalla más mal sueño como señal de triage.
 
 ## Herramientas y métodos
-- **Excel:** COUNTIFS, SUMPRODUCT, AVERAGEIFS, CORREL, INDEX+MATCH, FILTER, IFERROR, TRIM, tabla dinámica
-- **Dashboard interactivo de búsqueda** para consultar cualquier canción o artista
-- **Python (Pandas):** unión y limpieza de los archivos semanales
+- **Dashboard interactivo en Excel:** 4 segmentadores, 4 macros en VBA (borrar filtros, mostrar grupo en riesgo, marca de tiempo, exportar a PDF), formato condicional, 13 gráficos
+- **Estadística en Excel:** CORREL, RSQ, SLOPE/INTERCEPT, STDEV.S, CONFIDENCE.NORM, PERCENTILE, COUNTIFS, AVERAGEIFS, IF anidados
+- **Presentación en PowerPoint** con recomendaciones de negocio
 
 ## Archivos
-- [`spotify_chart_analysis.xlsm`](spotify_chart_analysis.xlsm): libro completo con datos, análisis, gráficos y dashboard
+- [`adolescent_depression_presentation.pdf`](adolescent_depression_presentation.pdf): presentación de 7 diapositivas
+- [`adolescent_depression_dashboard.xlsm`](adolescent_depression_dashboard.xlsm): libro completo y dashboard interactivo
